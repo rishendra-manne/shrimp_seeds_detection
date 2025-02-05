@@ -4,5 +4,8 @@ matplotlib
 transformers
 tensorflow
 torch
+pyyaml==5.1
 roboflow
+git+https://github.com/facebookresearch/detectron2.git
 -e.
+scikit-learn
