@@ -9,3 +9,4 @@ roboflow
 git+https://github.com/facebookresearch/detectron2.git
 -e.
 scikit-learn
+dvc
