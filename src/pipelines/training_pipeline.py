@@ -14,9 +14,9 @@ def main():
     model=Model()
     data_ingestion.get_data("https://universe.roboflow.com/ds/OoffgDRtBF?key=nHXCifHwcG")
     data_ingestion.extract_data()
-    train_images= data_ingestion.load_images_as_numpy(r"src/artifacts/dataset/train")
-    valid_images=data_ingestion.load_images_as_numpy(r"src/artifacts/dataset/valid")
-    test_images=data_ingestion.load_images_as_numpy(r"src/artifacts/dataset/test")
+    train_images= data_ingestion.load_images_as_numpy(os.path.join("src","artifacts","dataset","train"))
+    valid_images=data_ingestion.load_images_as_numpy(os.path.join("src","artifacts","dataset","valid"))
+    test_images=data_ingestion.load_images_as_numpy(os.path.join("src","artifacts","dataset","test"))
 
     train_path=data_preprocessing.preprocess_images(train_images)
     valid_path=data_preprocessing.preprocess_images(valid_images)
