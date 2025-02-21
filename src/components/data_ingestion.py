@@ -76,9 +76,9 @@ class DataIngestion:
 
         return images
     def register_instances(self,train_path,test_path,valid_path):
-        register_coco_instances("my_dataset_train", {},"src/artifacts/dataset/train/_annotations.coco.json", train_path)
-        register_coco_instances("my_dataset_test", {}, "src/artifacts/dataset/test/_annotations.coco.json", test_path)
-        register_coco_instances("my_dataset_valid", {},"src/artifacts/dataset/valid/_annotations.coco.json", valid_path)
+        register_coco_instances("my_dataset_train", {},os.path.join("src","artifacts","dataset","train","_annotations.coco.json"), train_path)
+        register_coco_instances("my_dataset_test", {}, os.path.join("src","artifacts","dataset","test","_annotations.coco.json"), test_path)
+        register_coco_instances("my_dataset_valid", {},os.path.join("src","artifacts","dataset","valid","_annotations.coco.json"), valid_path)
 
 
 
