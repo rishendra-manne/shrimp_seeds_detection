@@ -19,7 +19,7 @@ class TrainingConfig:
     """Configuration class for model training parameters"""
     MLFLOW_TRACKING_URI: str = "https://dagshub.com/rishendra-manne/shrimp_seeds_detection.mlflow"
     MODEL_CONFIG_PATH: str = "COCO-Detection/faster_rcnn_R_50_FPN_1x.yaml"
-    OUTPUT_DIR: str = "outputs5"
+    OUTPUT_DIR: str = "outputs"
 
     def get_model_config(self) -> CfgNode:
         """Creates and returns the model configuration"""
