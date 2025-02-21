@@ -12,7 +12,7 @@ import numpy as np
 @dataclass
 class PreprocessingConfig:
     preprocessed_train_path: str = os.path.join(
-        os.getcwd(),'src/artifacts',
+        os.getcwd(),'src','artifacts',
         'preprocessed',
         'train'
     )
