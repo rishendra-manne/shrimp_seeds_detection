@@ -174,9 +174,9 @@ def main():
         uploaded_file = st.file_uploader("Choose an image", type=["jpg", "jpeg", "png"])
     else:
         sample_images = {
-            "Sample 1": "/teamspace/studios/this_studio/IMG_7254.JPG",
-            "Sample 2": "/teamspace/studios/this_studio/IMG_7240.JPG",
-            "Sample 3": "/teamspace/studios/this_studio/IMG_7235 (1).JPG"
+            "Sample 1": "IMG_7254.JPG",
+            "Sample 2": "IMG_7240.JPG",
+            "Sample 3": "IMG_7235 (1).JPG"
         }
         selected_sample = st.selectbox("Choose a sample image", list(sample_images.keys()))
         if selected_sample:
@@ -284,8 +284,8 @@ def main():
                 mask = create_roi_mask(image.shape, polygon)
                 masked_image = cv2.bitwise_and(image, image, mask=mask)
                 
-                config_path = "/teamspace/studios/this_studio/outputs/config.yaml"
-                weights_path = "/teamspace/studios/this_studio/outputs/model_final.pth"
+                config_path = os.path.join("outputs","config.yaml")
+                weights_path = os.path.join("outputs","model_final.pth")
                 model = get_model(config_path, weights_path)
                 
                 with st.spinner('Processing image...'):
