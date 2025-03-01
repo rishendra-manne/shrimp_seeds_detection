@@ -8,6 +8,7 @@ from detectron2.engine import DefaultPredictor
 import matplotlib.pyplot as plt
 from PIL import Image
 import io
+import os
 import time
 
 st.set_page_config(page_title="Object Detection App (GPU)", layout="wide")
@@ -174,9 +175,9 @@ def main():
         uploaded_file = st.file_uploader("Choose an image", type=["jpg", "jpeg", "png"])
     else:
         sample_images = {
-            "Sample 1": "IMG_7254.JPG",
-            "Sample 2": "IMG_7240.JPG",
-            "Sample 3": "IMG_7235 (1).JPG"
+            "Sample 1": os.path.join('src','artifacts','test_samples','IMG_7254.JPG'),
+            "Sample 2": os.path.join('src','artifacts','test_samples','IMG_7240.JPG'),
+            "Sample 3": os.path.join('src','artifacts','test_samples','IMG_7235 (1).JPG')
         }
         selected_sample = st.selectbox("Choose a sample image", list(sample_images.keys()))
         if selected_sample:
